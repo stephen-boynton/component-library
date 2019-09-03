@@ -13,14 +13,15 @@ const Header = styled.h2`
 const Description = styled.p`
 	font-style: italic;
 `
-
+const SimpleDefault = SimpleCardHOF();
 const SimpleCard = SimpleCardHOF(Header, Description);
 const PSimpleCard = PrimarySimpleCard(Header, Description);
 const SSimpleCard = SecondarySimpleCard(Header, Description);
 
 storiesOf('Cards/SimpleCards/Default')
 	.addDecorator(storyFn => <Wrapper>{storyFn()}</Wrapper>)
-	.add('default', () => (
+	.add('default', () => <SimpleDefault headerText="This is a Card" descriptionText="this is the description of card that is in this library and has a lot of text in it just to see how long it would go with all of these words, look at those turkerys" />)
+	.add('with custom head and description', () => (
 		<SimpleCard headerText="This is a Card" descriptionText="this is the description of card that is in this library and has a lot of text in it just to see how long it would go with all of these words, look at those turkerys" />
 	))
 	.add('as link', () => (

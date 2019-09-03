@@ -23,8 +23,18 @@ const MainSectionWrapper = styled.div`
 	padding-left: 15px;
 `
 
+const DefaultHeader = styled.h2`
+	padding: 0;
+	margin: 0;
+`
+
+const DefaultDescription = styled.p`
+padding-right: 5px;
+font-family: sans-serif;
+`
+
 const SimpleCard = (defaultAccentColor, defaultAccentHoverColor) =>
-	(Header, Description) =>
+	(Header = DefaultHeader, Description = DefaultDescription) =>
 		({ accentColor = defaultAccentColor, accentHoverColor = defaultAccentHoverColor, headerText, descriptionText, type, ...props }) => (
 			<SimpleCardWrapper type={type} accentHoverColor={accentHoverColor}>
 				<Accent accentColor={accentColor} />
