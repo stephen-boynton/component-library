@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PRIMARY, PRIMARY_LIGHT, SECONDARY, SECONDARY_LIGHT } from '../../defaults/colors'
+import { PRIMARY, PRIMARY_LIGHT, SECONDARY, SECONDARY_LIGHT } from '../../../defaults/colors'
 
 const NavWrapper = styled.ul`
 	display: flex;
